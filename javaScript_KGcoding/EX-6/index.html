@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6</title>
+</head>
+<body>
+    <script>
+        let age = 6;
+        let gender= 'male';
+        let discount = 0;
+        let ticketPrise = 200;
+        if(age <= 5){
+            discount = 100;
+        } else if(gender === 'female' || age <= 8){
+            discount = 50;
+        } else if(age > 65) {
+            discount = 30;
+        }
+        ticketPrise = ticketPrise - discount*ticketPrise/100;
+        console.log(`you've got ${discount}% discount and your ticket prise is ${ticketPrise}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+</head>
+<body>
+    <h1 class="name"></h1>
+    <script>
+        let name = 'KrishnKant Kumar';
+        // document.querySelector('.name').innerHTML = name;
+        // document.querySelector('.name').innerText = name;
+        document.querySelector('.name').textContent = name;
+        let sellorPrise = 12000;
+        let isDiscount = 2999;
+        let finalPrise;
+        let isCouponPrise;
+        let packagingCharge = 60;
+        const GST = 18;
+        finalPrise = (sellorPrise - (isDiscount || 0) - (isCouponPrise || 0) + packagingCharge) + GST+100/100;
+        console.log(finalPrise);
+        console.log(eval('22+33'));
+    </script>
+</body>
+</html>

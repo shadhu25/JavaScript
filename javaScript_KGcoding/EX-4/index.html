@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+    <style>
+        .class-button {
+            background-color: rgb(111, 239, 111);
+            border: none;
+            border-radius: 10px;
+            padding: 6px 20px;
+        }
+        #id-button {
+            text-transform: uppercase;
+            padding: 5px 35px;
+            border-radius: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <button class="class-button" onclick="
+        totalItem++;
+        document.querySelector('#number').innerText = totalItem;
+        ">add to bag</button>
+    <button id="id-button" onclick="
+        totalItem--;
+        document.querySelector('#number').innerText = totalItem;
+    ">move to wishlist</button>
+    <button class="class-button" onclick="
+        totalItem+=2;
+        document.querySelector('#number').innerText = totalItem;
+    ">add 1+1 slae item</button>
+    <h1>Your Bag has <span id="number">0</span> items</h1>
+    <h1></h1>
+    <script>
+        let totalItem = 0;
+    </script>
+</body>
+</html>

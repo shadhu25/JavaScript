@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 11</title>
+    <style>
+        button {
+            background-color: rgb(249, 49, 49);
+            border: none;
+            border-radius: 15px;
+            padding: 5px 10px;
+            color: whitesmoke;
+            font-weight: 700;
+            width: 70px;
+            height: 26px;
+        }
+        button:active {background-color: #333}
+    </style>
+</head>
+<body>
+    <button>Krishn</button>
+    <script>
+        let multiply = (num1, num2) => num1 * num2;
+        console.log(multiply(2,55));
+
+        let print = () => console.log('Radhe Radhe');
+        let runTwice = fun => {
+            fun();
+            fun();
+        }
+        console.log(runTwice(print));
+
+        let myButton = document.querySelector('button');
+        let sizeDouble = event => {
+            myButton.style.width = 140 + 'px';
+            myButton.style.height = 52 + 'px';
+            myButton.style.fontSize = 2 + 'em';
+        }
+        myButton.addEventListener('click', () => setTimeout(sizeDouble, 2000));
+
+        let arr = [1,2,3,4,5,6,7,8,9];
+        let sum = 0;
+        arr.forEach(num => sum += num );
+        console.log(sum);
+
+        let newArr = arr.map(num => num * num);
+        console.log(newArr);
+    </script>
+</body>
+</html>

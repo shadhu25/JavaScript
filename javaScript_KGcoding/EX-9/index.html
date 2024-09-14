@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 9</title>
+</head>
+<body>
+    <h3 class="greet"></h3>
+    <button class="btn" onclick="
+        getPressed();
+    "></button>
+    <script>
+        
+        function greet(personName = 'Dear'){
+            let myDate = new Date();
+            hours = myDate.getHours();
+            let greeting = document.querySelector('.greet'); 
+            if(hours > 6 && hours < 12){
+                greeting.innerText = `Good Morning ${personName}`;
+            } else if(hours > 12 && hours < 18){
+                greeting.innerText = `Good Afternoon ${personName}`;
+            } else {
+                greeting.innerText = `Good Night ${personName}`;
+            }
+        }
+        greet('Krishn');
+
+        let pressed =localStorage.getItem('Pressed')  || 0;
+        function getPressed(){
+            pressed++;
+            setColor();
+            localStorage.setItem('Pressed', pressed);
+            document.querySelector('.btn').innerText = pressed;
+        }
+        function setColor(){
+            if(pressed % 2 == 0){
+                document.querySelector('.btn').style.backgroundColor = 'lightgreen';
+            } else {
+                document.querySelector('.btn').style.backgroundColor = 'gray';
+            }
+        }
+        setColor();
+        document.querySelector('.btn').innerText = pressed;
+
+    </script>
+</body>
+</html>
