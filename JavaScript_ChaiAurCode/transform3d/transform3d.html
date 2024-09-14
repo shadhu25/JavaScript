@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .container {
+            height: 200px;
+            width: 200px;
+            transform-style: preserve-3d;
+            position: relative;
+            transform: perspective(1000px) rotateY(45deg);
+        }
+        .box {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+        .box:nth-child(1) {
+            background-color: chartreuse;
+            transform: rotateY(45deg) translateZ(300px);
+        }
+        .box:nth-child(2) {
+            background-color: coral;
+            transform: rotateY(90deg) translateZ(300px);
+        }
+        .box:nth-child(3) {
+            background-color: darkgoldenrod;
+            transform: rotateY(135deg) translateZ(300px);
+        }
+        .box:nth-child(4) {
+            background-color: deeppink;
+            transform: rotateY(180deg) translateZ(300px);
+        }
+        .box:nth-child(5) {
+            background-color: dodgerblue;
+            transform: rotateY(225deg) translateZ(300px);
+        }
+        .box:nth-child(6) {
+            background-color: darkgray;
+            transform: rotateY(270deg) translateZ(300px);
+        }
+        .box:nth-child(7) {
+            background-color: gold;
+            transform: rotateY(310deg) translateZ(300px);
+        }
+        .box:nth-child(8) {
+            background-color: darkred;
+            transform: rotateY(355deg) translateZ(300px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorStyleInactive": "line",
+  "terminal.integrated.cursorWidth": 3,
+  "terminal.integrated.focusAfterRun": "terminal",
+  "liveServer.settings.port": 5501
+}
